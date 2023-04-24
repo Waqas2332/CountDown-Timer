@@ -20,8 +20,18 @@ body {
 }
 .heading span {
   display: block;
+  text-align: center;
+  margin-bottom: 3rem;
 }
+
+/* .form-section {
+    position: relative;
+  width: 70%;
+  height: 50vh;
+  border-radius: 10px;
+} */
 main {
+  visibility: hidden;
   margin-top: 5rem;
   font-weight: 700;
   text-align: center;

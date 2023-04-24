@@ -1,3 +1,4 @@
+// Referencing HTML Elemenets
 const days = document.getElementById("days");
 const hours = document.getElementById("hours");
 const minutes = document.getElementById("minutes");
@@ -6,10 +7,15 @@ const newDays = document.getElementById("user-days");
 const newMonth = document.getElementById("user-month");
 const newYear = document.getElementById("user-year");
 const form = document.querySelector("form");
+const main = document.querySelector("main");
+
+// Declaring Variables
 let numDays = 0;
 let numMonths = 0;
 let numYears = 0;
+let newDate;
 
+// Getting Input Field Values
 newDays.addEventListener("change", (event) => {
   numDays = event.target.value;
 });
@@ -21,12 +27,19 @@ newMonth.addEventListener("change", (event) => {
 newYear.addEventListener("change", (event) => {
   numYears = event.target.value;
 });
-let newDate;
+
+// Submiitting Form
+// Assembling Date and showing result
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   newDate = `${numDays} ${numMonths} ${numYears}`;
   console.log(newDate);
+  setTimeout(() => {
+    main.style.visibility = "visible";
+  }, 100);
 });
+
+// Calculation Remmaining Time
 function countDown() {
   const getNewDate = new Date(newDate);
   const currDate = new Date();
