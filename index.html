@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section>
+      <form>
+        <input
+          type="number"
+          placeholder="Enter Date"
+          min="1"
+          max="31"
+          step="1"
+          id="user-days"
+        />
+        <select id="user-month">
+          <option selected>--Select Month--</option>
+          <option value="Jan">Janaury</option>
+          <option value="Feb">February</option>
+          <option value="Mar">March</option>
+          <option value="Apr">April</option>
+          <option value="May">May</option>
+          <option value="Jun">June</option>
+          <option value="Jul">July</option>
+          <option value="Aug">August</option>
+          <option value="Sep">September</option>
+          <option value="Oct">October</option>
+          <option value="Nov">November</option>
+          <option value="Dec">December</option>
+        </select>
+        <input
+          type="number"
+          placeholder="Enter Year"
+          id="user-year"
+          min="2020"
+          max="2050"
+          step="1"
+        />
+        <input type="submit" value="Click" />
+      </form>
+    </section>
+    <h1 class="heading">
+      Get ready, get set, and get excited!
+      <span>Your event is just a countdown away.</span>
+    </h1>
+    <main>
+      <div class="date">
+        <p id="days"></p>
+        <span>Days</span>
+      </div>
+      <div class="date">
+        <p id="hours"></p>
+        <span>Hours</span>
+      </div>
+      <div class="date">
+        <p id="minutes"></p>
+        <span>Minutes</span>
+      </div>
+      <div class="date">
+        <p id="seconds"></p>
+        <span>Seconds</span>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
